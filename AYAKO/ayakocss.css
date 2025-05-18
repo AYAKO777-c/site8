@@ -103,3 +103,33 @@ h2 {
 .popup img:hover {
   transform: scale(1.02);
 }
+
+
+.small-creepy-image {
+  width: 1200px;
+  height: 300px;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 0 15px #700000;
+}
+
+.audio-player {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.audio-label {
+  font-size: 18px;
+  color: #cc0000;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+audio {
+  width: 100%;
+  max-width: 400px;
+  filter: grayscale(100%) brightness(80%);
+  border: 2px solid #cc0000;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
