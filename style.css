@@ -131,3 +131,34 @@ li {
   flex: 1;
   min-width: 300px;
 }
+
+.corner-box {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid black;
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.corner-box:hover {
+  transform: scale(1.1);
+  background-color: #330000;
+}
+.corner-text {
+  display: flex;
+  justify-content: center;
+  color: #cc0000;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-shadow: 1px 1px 3px black;
+}
