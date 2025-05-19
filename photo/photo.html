@@ -7,13 +7,38 @@
   <link rel="stylesheet" href="photos.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="image-block">
-      <img src="888.jpg" alt="Фото 1" />
+  <div id="overlay">
+    <button id="enter-button">Войти</button>
+  </div>
+
+  <audio id="creepy-audio" loop>
+    <source src="999.mp3" type="audio/mpeg" />
+    Ваш браузер не поддерживает аудио.
+  </audio>
+
+  <div class="container" style="display: none;">
+    <div class="image-wrapper">
+      <img src="777.jpg" alt="Фото 1" />
     </div>
-    <div class="image-block">
-      <img src="777.jpg" alt="Фото 2" />
+    <div class="image-wrapper">
+      <img src="888.jpg" alt="Фото 2" />
+    </div>
+    <div class="image-wrapper">
+      <img src="000.jpg" alt="Фото 2" width="1200" height="400"/>
     </div>
   </div>
+
+  <script>
+    const enterBtn = document.getElementById('enter-button');
+    const overlay = document.getElementById('overlay');
+    const container = document.querySelector('.container');
+    const audio = document.getElementById('creepy-audio');
+
+    enterBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      container.style.display = 'block';
+      audio.play();
+    });
+  </script>
 </body>
 </html>
