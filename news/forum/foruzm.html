@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проклятая лесополоса</title>
+  <link rel="stylesheet" href="forumcss.css">
+</head>
+<body>
+  <div id="fog"></div>
+
+  <header>Проклятая лесополоса</header>
+
+  <nav>
+    <a href="#main">Главная</a>
+    <a href="#diary">Дневники</a>
+    <a href="#forum">Форум</a>
+    <a href="#map">Карта</a>
+  </nav>
+
+  <main id="main">
+    <div class="section-title">Добро пожаловать</div>
+    <p>Вы вошли в проклятую лесополосу. Будьте осторожны: ночь здесь длиннее, чем кажется, и лес помнит каждого, кто осмелился войти.</p>
+  </main>
+
+ <main id="diary">
+  <div class="section-title">Дневники заблудших</div>
+
+  <!-- Дневник 1 -->
+  <div class="diary-entry" data-full="Туман опустился мгновенно. Шорохи вокруг, но никого не видно. Вдалеке мерцают огоньки, будто кто-то наблюдает. Сердце бьётся учащённо, но шаги затихают сами собой.">
+    <div class="entry-date">21 августа, 23:15</div>
+    <p class="entry-preview">Туман опустился мгновенно… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 2 -->
+  <div class="diary-entry" data-full="Лес кажется живым. Тени деревьев сгибаются и тянутся ко мне. Чувствую взгляд из тьмы. Ветер шепчет непонятные слова, а шаги отзываются эхом, которого нет.">
+    <div class="entry-date">21 августа, 00:02</div>
+    <p class="entry-preview">Лес кажется живым… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 3 — просьба о помощи на русском -->
+  <div class="diary-entry" data-full="Бля, если кто это читает… я в лесу уже два дня. Помогите, пиздец, что-то движется вокруг, слышу шорохи и крики воронов. Не знаю, что делать.">
+    <div class="entry-date">20 августа, 22:50</div>
+    <p class="entry-preview">Бля, если кто это читает… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 4 — на английском -->
+  <div class="diary-entry" data-full="I don't know how long I've been walking. Everything is dark, the trees whisper. Please, someone find me. I hear her, Ayako, every night.">
+    <div class="entry-date">19 августа, 01:40</div>
+    <p class="entry-preview">I don't know how long I've been walking… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 5 — на японском -->
+  <div class="diary-entry" data-full="助けてください！森に閉じ込められています。木々の間から何かが私を見ています。カラスの鳴き声がどんどん大きくなってきます。">
+    <div class="entry-date">15 мая 2024, 23:10</div>
+    <p class="entry-preview">助けてください！森に閉じ込められています… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 6 — встреча с Аяко -->
+  <div class="diary-entry" data-full="Сегодня ночью на тропе показалась Аяко. Тонкая тень с длинными чёрными волосами, лицо скрыто. Её глаза пустые, словно две дыры, и сердце будто замерло. Она скользит между деревьями, волосы двигаются сами по себе. Слышен крик воронов — значит, она рядом. Никто не выжил после того, как встретил её взгляд.">
+    <div class="entry-date">22 августа, 00:45</div>
+    <p class="entry-preview">Сегодня ночью на тропе показалась Аяко… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 7 — старая запись -->
+  <div class="diary-entry" data-full="Никто не верит, но я видел фигуру ночью. Холодно, ветра нет, а она скользит сквозь деревья. Я пытался убежать, но ноги не слушались.">
+    <div class="entry-date">30 мая 2023, 02:30</div>
+    <p class="entry-preview">Никто не верит… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 8 — просьба на французском -->
+  <div class="diary-entry" data-full="Aidez-moi! Je suis perdu dans la forêt. Les corbeaux crient et je sens une présence sombre derrière moi.">
+    <div class="entry-date">28 мая 2023, 23:55</div>
+    <p class="entry-preview">Aidez-moi! Je suis perdu… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 9 — отчаянная просьба на немецком -->
+  <div class="diary-entry" data-full="Hilfe! Ich kann nicht mehr. Etwas verfolgt mich zwischen den Bäumen. Die Krähen schreien, und ich höre Schritte, die mir folgen.">
+    <div class="entry-date">12 мая 2022, 01:05</div>
+    <p class="entry-preview">Hilfe! Ich kann nicht mehr… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 10 — на голландском -->
+  <div class="diary-entry" data-full="Help! Ik ben verdwaald in het bos. De schaduwen bewegen en de kraaien schreeuwen steeds harder. Ik voel iets volgen, maar ik zie niets.">
+    <div class="entry-date">5 mei 2023, 22:20</div>
+    <p class="entry-preview">Help! Ik ben verdwaald… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 11 — на японском, старая запись -->
+  <div class="diary-entry" data-full="夜中に森を歩いていた。何かが私を見ているような気がして振り返ったら、影だけが動いていた。心臓が止まりそうだった。">
+    <div class="entry-date">12 мая 2022, 01:50</div>
+    <p class="entry-preview">夜中に森を歩いていた… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+  <!-- Дневник 12 — на голландском, отчаянная просьба -->
+  <div class="diary-entry" data-full="Als iemand dit leest, ren! Het bos is niet wat het lijkt. De lucht is stil, maar ik hoor voetstappen achter me."):
+    <div class="entry-date">14 mei 2022, 03:15</div>
+    <p class="entry-preview">Als iemand dit leest, ren!… <span class="read-more">[читать дальше]</span></p>
+  </div>
+
+</main>
+
+
+
+  <main id="forum">
+  <div class="section-title">Форум пользователей</div>
+
+  <div class="forum-category">
+    <h3>Общие обсуждения</h3>
+    <p>Делимся впечатлениями и легендами о лесополосе. Что вы заметили днем? Какие растения и деревья кажутся странными?</p>
+    <ul>
+      <li>Пользователь1: "Замечал, что на северной тропе всегда холоднее, чем вокруг."</li>
+      <li>Пользователь2: "Кто-нибудь видел мигающие огоньки ночью?"</li>
+    </ul>
+  </div>
+
+  <div class="forum-category">
+    <h3>Ночные наблюдения</h3>
+    <p>Все странные события, которые происходят после захода солнца. Шорохи, тени, огоньки, мистические явления.</p>
+    <ul>
+      <li>Пользователь3: "Вчера видел силуэт между деревьями, но никого рядом не было."</li>
+      <li>Пользователь4: "Каждую ночь слышу шепот и скрип веток, будто кто-то идет за мной."</li>
+      <li>Пользователь5: "На западной поляне слышал колокольный звон, хотя церкви рядом нет."</li>
+    </ul>
+  </div>
+
+  <div class="forum-category">
+    <h3>Теории и догадки</h3>
+    <p>Попытки разгадать тайну лесополосы и дневники заблудших. Возможно, здесь скрыта древняя энергия или проклятие старого поселения.</p>
+    <ul>
+      <li>Пользователь6: "Думаю, лес сам выбирает, кого пугать. Непослушных забирает туман."</li>
+      <li>Пользователь7: "Светящиеся точки на карте — это портал в другой мир."</li>
+      <li>Пользователь8: "Дневники показывают, что кто-то или что-то наблюдает за каждым шагом."</li>
+    </ul>
+  </div>
+      
+<div class="forum-category">
+  <h3>Легенды и призраки</h3>
+  <p>Обсуждаем мистические сущности лесополосы. Здесь упоминают Аяко, таинственную девушку-тень, что забирает жизнь взглядом.</p>
+  <ul>
+    <li>Пользователь9: "Вчера видел её тень на тропе. Волосы двигались, будто сами." </li>
+    <li>Пользователь10: "Слышал крик воронов и почувствовал, что кто-то наблюдает." </li>
+    <li>Пользователь11: "Говорят, кто встретил её взгляд, больше никогда не возвращался."</li>
+  </ul>
+</div>
+      
+</main>
+    
+    
+
+
+
+   <main id="map">
+    <div class="section-title">Карта лесополосы</div>
+    <p>В разработке: здесь будут отмечены опасные зоны и места, где наблюдались мистические явления.</p>
+  </main>
+
+  <footer>
+    © 2025 Проклятая лесополоса. Все права защищены.
+  </footer>
+
+  <script src="forumjs.js"></script>
+</body>
+</html>
