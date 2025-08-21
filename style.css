@@ -162,3 +162,87 @@ li {
   border-radius: 4px;
   text-shadow: 1px 1px 3px black;
 }
+
+.vanish {
+  display: inline-block;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+}
+
+#camera-warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  border: 2px solid red;
+  padding: 20px;
+  color: red;
+  font-size: 1.2rem;
+  display: none;
+  z-index: 99999;
+  width: 400px;         /* фиксированная ширина окна */
+  max-height: 300px;    /* максимальная высота */
+  overflow-wrap: break-word; /* перенос слов */
+  word-wrap: break-word;     /* для старых браузеров */
+  overflow-y: auto;     /* скролл, если текста много */
+  white-space: normal;  /* учитывает пробелы и переносы */
+}
+
+/* Динамический фон */
+#dynamic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('forest.jpg') no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.4) blur(1px);
+  z-index: -999;
+  pointer-events: none;
+  transition: filter 1s linear;
+}
+
+/* Вспышки */
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+/* Эффект наблюдения */
+.eye {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: red;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Силуэты-преследователи для чёрного фона */
+.shadow {
+  position: fixed;
+  width: 60px;
+  height: 120px;
+  background: rgba(50,0,0,0.4); /* тёмно-красная тень */
+  border: 2px solid rgba(150,0,0,0.6); /* подсвечивание контура */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.5s, transform 1s;
+  filter: blur(2px);
+  box-shadow: 0 0 20px rgba(200,0,0,0.6); /* красное свечение */
+}
+
