@@ -266,3 +266,18 @@ li {
   height: auto;
   filter: contrast(150%) saturate(200%) hue-rotate(-20deg);
 }
+
+/* Эффект глюка для подменённого текста */
+.description.corrupt {
+  color: #c00;
+  text-shadow: 0 0 6px #900, 0 0 16px #000;
+  animation: glitch 0.7s steps(2, jump-none) infinite alternate;
+}
+
+@keyframes glitch {
+  0%   { transform: translate(0,0) skewX(0deg);   filter: blur(0); }
+  25%  { transform: translate(1px,-1px) skewX(1deg); filter: blur(0.5px); }
+  50%  { transform: translate(-1px,1px) skewX(-1deg); filter: blur(0); }
+  75%  { transform: translate(2px,0) skewX(0.5deg);  filter: blur(0.4px); }
+  100% { transform: translate(0,0) skewX(0deg);   filter: blur(0); }
+}
