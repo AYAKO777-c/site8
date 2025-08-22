@@ -36,6 +36,60 @@ function showCameraWindow() {
   setTimeout(() => cam.style.display = "none", 5000 + mainText.length * 50);
 }
 
+/ --- Подмена текста в видимом <p class="description"> ---
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = Array.from(document.querySelectorAll("p.description"));
+  if (!targets.length) return;
+
+  // сохраняем оригинал
+  targets.forEach(el => {
+    if (!el.dataset.origHtml) el.dataset.origHtml = el.innerHTML;
+  });
+
+  const creepyReplacements = [
+    "Она уже рядом...",
+    "Ты чувствуешь дыхание за спиной?",
+    "Скоро всё кончится.",
+    "Я смотрю прямо на тебя.",
+    "Не моргай.",
+    "Тебе не уйти."
+  ];
+
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight &&
+      rect.bottom > 0 &&
+      rect.left < window.innerWidth &&
+      rect.right > 0
+    );
+  }
+
+  function corruptVisible() {
+    // берём только видимые элементы
+    const visible = targets.filter(isInViewport);
+    if (!visible.length) return;
+
+    const el = visible[Math.floor(Math.random() * visible.length)];
+    if (el.classList.contains("corrupt")) return;
+
+    const phrase = creepyReplacements[Math.floor(Math.random() * creepyReplacements.length)];
+
+    // подмена
+    el.classList.add("corrupt");
+    el.textContent = phrase;
+
+    // вернуть обратно через 4–6 сек
+    setTimeout(() => {
+      el.innerHTML = el.dataset.origHtml;
+      el.classList.remove("corrupt");
+    }, 4000 + Math.random() * 2000);
+  }
+
+  // запуск каждые 15–25 секунд
+  setInterval(corruptVisible, 15000 + Math.random() * 10000);
+});
+
 // Первое появление через 7 секунд
 setTimeout(showCameraWindow, 7000);
 
