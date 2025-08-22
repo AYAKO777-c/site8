@@ -142,3 +142,56 @@ function triggerShadow() {
     shadow.style.opacity = 0;
   }, 1000 + Math.random() * 1000);
 }
+
+
+// --- 5. Отражение пользователя (фото с камеры) ---
+const photoContainer = document.getElementById("photo-container");
+
+navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+  const video = document.createElement("video");
+  video.srcObject = stream;
+  video.play();
+
+  setInterval(() => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 300;
+    canvas.height = 200;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    const img = document.createElement("img");
+    img.src = canvas.toDataURL("image/png");
+
+    photoContainer.innerHTML = "";
+    photoContainer.appendChild(img);
+    photoContainer.style.display = "block";
+
+    // скрыть фото через 3 секунды
+    setTimeout(() => {
+      photoContainer.style.display = "none";
+    }, 3000);
+
+  }, 30000 + Math.random() * 30000); // каждые 30–60 секунд
+}).catch(err => {
+  console.log("Нет доступа к камере:", err);
+});
+
+function corruptText() {
+  // берём все параграфы на странице
+  const paragraphs = document.querySelectorAll("p, li, .message, .post");
+  if (paragraphs.length === 0) return;
+
+  const randomEl = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+  const oldText = randomEl.textContent;
+  const newText = creepyReplacements[Math.floor(Math.random() * creepyReplacements.length)];
+
+  randomEl.textContent = newText;
+
+  // вернуть обратно через 5 сек
+  setTimeout(() => {
+    randomEl.textContent = oldText;
+  }, 5000);
+}
+
+// запускаем каждые 15–30 секунд
+setInterval(corruptText, 15000 + Math.random() * 15000);
