@@ -25,19 +25,33 @@
 
  <main id="diary">
   <div class="section-title">Дневники заблудших</div>
-
-
-    <div class="diary-entry" data-full="Был там этой ночью. Сначала туман стоял кусками, будто дым из земли. Фонарик начал моргать, хотя батарея свежая.
-
-На тропе увидел силуэт — высокий, нереально, руки почти до земли. Глазами — пустота, но через экран телефона он двигался ко мне.
-
-Побежал. За спиной услышал сиплый голос, как будто шепчет моё имя. Запись на телефоне обрезалась в тот момент, когда вошёл в туман.
-
-Я туда больше не ногой..">
-    <div class="entry-date">21 августа, 23:15</div>
-    <p class="entry-preview">Был там ночью… <span class="read-more">[читать дальше]</span></p>
-    </div>
-   
+     
+     <div class="diary-entry" data-full="...">
+    <div class="entry-date">14 октября, 00:53</div>
+    <p class="entry-preview">... <span class="read-more">[читать дальше]</span></p>
+  </div>  
+     
+      <div class="diary-entry" data-full="Ребят, этот свет… он будто дышит. То ближе, то дальше, и от него идёт гул, низкий, прямо в грудь бьёт.
+Попробовал заснять — камера всё время фокус теряет, будто кто-то дергает объектив.
+На секунду показалось, что внутри света стоит кто-то. Тень. Высокая.
+Сейчас он стал ярче. Серьёзно, будто зовёт.">
+    <div class="entry-date">14 октября, 00:11</div>
+    <p class="entry-preview">Ребят, этот свет... <span class="read-more">[читать дальше]</span></p>
+  </div>  
+     
+     <div class="diary-entry" data-full="Иду уже минут двадцать. Туман странный, не движется вообще. Фонарь тускнеет, хотя заряд полный.
+Сейчас впереди вижу свет. Не фонарь, не фара — он висит в воздухе, метрах в пятидесяти.
+Белый, но как будто живой.
+Подхожу ближе.">
+    <div class="entry-date">13 октября, 23:12</div>
+    <p class="entry-preview">Иду уже минут... <span class="read-more">[читать дальше]</span></p>
+  </div>   
+     
+    <div class="diary-entry" data-full="Решил сходить в ту самую лесополосу, про которую все пишут. Ночь тихая, ветер ноль. Беру фонарь и телефон, хочу проверить, что за “голоса” народ слышит. Отпишусь, если что-то увижу.">
+    <div class="entry-date">13 октября, 17;20</div>
+    <p class="entry-preview">Решил сходить... <span class="read-more">[читать дальше]</span></p>
+  </div>  
+     
    <div class="diary-entry" data-full="У меня одного сайт начал быть очень странным? Он почему-то делает мои фото, и как-то странно глючит.">
     <div class="entry-date">22 августа, 16:53</div>
     <p class="entry-preview">У меня одного… <span class="read-more">[читать дальше]</span></p>
@@ -156,15 +170,25 @@
 </div>
       
 </main>
-    
-    
-
 
 
    <main id="map">
-    <div class="section-title">Карта лесополосы</div>
-    <p>В разработке: здесь будут отмечены опасные зоны и места, где наблюдались мистические явления.</p>
-  </main>
+  <div class="section-title">Карта лесополосы</div>
+
+  <div id="forest-map-container" style="position: relative; width: 100%; max-width: 800px; margin: 20px auto; overflow: hidden;">
+    <!-- Фоновое изображение карты -->
+    <img src="forest666map.jpg" alt="Карта лесополосы" id="forest-map" style="width: 100%; display: block; filter: brightness(0.6) contrast(1.2); transition: transform 0.1s ease;">
+
+    <!-- Жуткие точки -->
+    <div class="map-point" data-text="Здесь исчезла группа туристов" style="position: absolute; top: 30%; left: 45%; width: 20px; height: 20px; background: red; border-radius: 50%; cursor: pointer;"></div>
+    <div class="map-point" data-text="Мистический крик слышен ночью" style="position: absolute; top: 60%; left: 70%; width: 20px; height: 20px; background: red; border-radius: 50%; cursor: pointer;"></div>
+    <div class="map-point" data-text="Тень Аяко замечена здесь" style="position: absolute; top: 50%; left: 25%; width: 20px; height: 20px; background: red; border-radius: 50%; cursor: pointer;"></div>
+
+    <!-- Tooltip -->
+    <div id="map-tooltip" style="position: fixed; pointer-events: none; background: rgba(0,0,0,0.8); color: #ff5555; padding: 5px 10px; border-radius: 5px; font-family: 'Courier New', monospace; display: none; z-index: 1000; font-size: 14px;"></div>
+  </div>
+</main>
+
 
   <footer>
     © 2025 Проклятая лесополоса. Все права защищены.
@@ -176,4 +200,3 @@
   <script src="forumjs.js"></script>
 </body>
 </html>
-
